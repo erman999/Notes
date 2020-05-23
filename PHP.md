@@ -1,5 +1,21 @@
 # PHP
 
+### dd
+```php
+function dd($var){
+  echo '<pre style="font-size:14px;">';
+
+  if (is_array($var) || is_object($var)) {
+    echo htmlentities(print_r($var, true));
+  } elseif (is_string($var)) {
+    echo "string(" . strlen($var) . ") \"" . htmlentities($var) . "\"\n";
+  } else {
+    var_dump($var);
+  }
+  echo "\n</pre>";
+}
+```
+
 ### scandir_r
 ```php
 function scandir_r($dir, &$result = []){
