@@ -2,10 +2,10 @@
 
 ### Upgrade PHP to 7.3
 
-```bash
+```sh
 curl -s https://php-osx.liip.ch/install.sh | bash -s 7.3
 ```
 
-```bash
+```sh
 export PATH=/usr/local/php5/bin:$PATH
 ```

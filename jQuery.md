@@ -18,6 +18,7 @@ $.ajax({
   }
 });
 ```
+<br />
 
 ### Ajax Multimedia
 ```js
