@@ -1,6 +1,6 @@
 # PHP
 
-### Ajax
+### Scandir_r
 ```php
 function scandir_r($dir, &$result = []){
   foreach (scandir($dir) as $key => $file) {
