@@ -14,8 +14,10 @@ function dd($var){
   }
   echo "\n</pre>";
 }
-```  
-  
+```
+
+<br />
+
 ### scandir_r
 ```php
 function scandir_r($dir, &$result = []){
