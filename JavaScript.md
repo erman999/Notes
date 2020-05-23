@@ -1,6 +1,6 @@
 # JavaScript
 
-#### Unique id
+### Unique id
 ```js
 function unique_id(length=32) {
   var result           = '';

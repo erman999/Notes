@@ -1,6 +1,6 @@
 # jQuery
 
-#### Ajax
+### Ajax
 ```js
 $.ajax({
   url : "page.php",
@@ -19,7 +19,7 @@ $.ajax({
 });
 ```
 
-#### Ajax Multimedia
+### Ajax Multimedia
 ```js
 $.ajax({
   url : "page.php",
