@@ -1,6 +1,6 @@
 # PHP
 
-### Scandir_r
+### scandir_r
 ```php
 function scandir_r($dir, &$result = []){
   foreach (scandir($dir) as $key => $file) {
