@@ -16,6 +16,7 @@ function dd($var){
 }
 ```
 
+
 ### scandir_r
 ```php
 function scandir_r($dir, &$result = []){
