@@ -33,7 +33,7 @@ sudo service php7.2-fpm restart
 
 ### PHP Upload Settings
 
-> Edit these parameters according to needs in php.ini
+> Edit these parameters in php.ini
 
 ```sh
 post_max_size
