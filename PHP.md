@@ -46,3 +46,24 @@ print_r(scandir_r($dir));
 //   [5] => /test/index.php
 //   [6] => /test/phpinfo.php
 ```
+
+### stddev
+```php
+function stddev($numbers){
+      $count = count($numbers);
+      $sum = array_sum($numbers);
+      $average = $sum / $count;
+
+      $sqr_diff = [];
+      foreach ($numbers as $key => $number) {
+        $sqr_diff[$key] = pow(($number - $average), 2);
+      }
+
+      $sum_sqr_diffs = array_sum($sqr_diff);
+      $variance = $sum_sqr_diffs / $count;
+      $stddev = (float)sqrt($variance);
+      return $stddev;
+    }
+```
+
+<br />
