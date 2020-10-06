@@ -65,11 +65,11 @@ function stddev($numbers, $type = 'P'){
   $sum_sqr_diffs = array_sum($sqr_diff);
 
   // Check calculation type
-  if ($type == 'P') {
-    // Population [P]
+  if ($type == 'S') {
+    // Sample [S]
     $variance = $sum_sqr_diffs / ($count - 1);
   } else {
-    // Sample [S]
+    // Population [P]
     $variance = $sum_sqr_diffs / $count;
   }
 
