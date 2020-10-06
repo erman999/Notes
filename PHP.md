@@ -77,6 +77,9 @@ function stddev($numbers, $type = 'P'){
   $stddev = (float)sqrt($variance);
   return $stddev;
 }
+
+echo stddev([-5, 1, 8, 7, 2]);
+
 ```
 
 <br />
