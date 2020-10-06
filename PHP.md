@@ -49,21 +49,34 @@ print_r(scandir_r($dir));
 
 ### stddev
 ```php
-function stddev($numbers){
-      $count = count($numbers);
-      $sum = array_sum($numbers);
-      $average = $sum / $count;
+function stddev($numbers, $type = 'P'){
 
-      $sqr_diff = [];
-      foreach ($numbers as $key => $number) {
-        $sqr_diff[$key] = pow(($number - $average), 2);
-      }
+  $count = count($numbers); // Count numbers
+  $sum = array_sum($numbers); // Sum numbers
+  $average = $sum / $count; // Arithmetic mean
 
-      $sum_sqr_diffs = array_sum($sqr_diff);
-      $variance = $sum_sqr_diffs / $count;
-      $stddev = (float)sqrt($variance);
-      return $stddev;
-    }
+  $sqr_diff = [];
+  foreach ($numbers as $key => $number) {
+    // Take each number, subtract the average and square
+    $sqr_diff[$key] = pow(($number - $average), 2);
+  }
+
+  // Sum all squared differences
+  $sum_sqr_diffs = array_sum($sqr_diff);
+
+  // Check calculation type
+  if ($type == 'P') {
+    // Population [P]
+    $variance = $sum_sqr_diffs / ($count - 1);
+  } else {
+    // Sample [S]
+    $variance = $sum_sqr_diffs / $count;
+  }
+
+  // Square root of the variance
+  $stddev = (float)sqrt($variance);
+  return $stddev;
+}
 ```
 
 <br />
