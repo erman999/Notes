@@ -1,21 +1,15 @@
 # Linux
 
-### Certbot obtain new certificate
-
-```sh
-sudo certbot certonly --standalone --preferred-challenges http -d fiersoft.com
-```
-
 ### MySQL Insert Database
 
 ```sh
 mysql -uUSERNAME -pPASSWORD DB_NAME < /home/MY_DB.sql
 ```
 
-### PHP 7.2 fpm Restart
+### PHP 7.4 fpm Restart
 
 ```sh
-sudo service php7.2-fpm restart
+sudo service php7.4-fpm restart
 ```
 
 ### PHP Upload Settings
@@ -47,3 +41,28 @@ hide_ids=YES
 pasv_min_port=40000
 pasv_max_port=50000
 ```
+
+
+### Certbot
+> New certificate
+```sh
+sudo certbot certonly --standalone --preferred-challenges http -d ektaz.com
+```
+> Renew registered certificates
+```sh
+sudo certbot renew
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
