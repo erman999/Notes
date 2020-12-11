@@ -39,9 +39,11 @@ sudo chmod 775 Example_Folder/
 ```
 
 ### vsftpd.conf (with anonymous & user login)
+```sh
 anonymous_enable=YES
 anon_root=/var/ftp/
 no_anon_password=YES
 hide_ids=YES
 pasv_min_port=40000
 pasv_max_port=50000
+```
