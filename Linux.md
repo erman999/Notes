@@ -1,5 +1,16 @@
 # Linux
 
+### Create tar.gz archive file
+```sh
+tar cvzf myfiles.tar.gz /home/myfiles
+```
+
+
+### Untar tar.gz file
+```sh
+tar -xvf myfiles.tar.gz
+```
+
 ### MySQL Insert Database
 
 ```sh
