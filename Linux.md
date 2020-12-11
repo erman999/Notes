@@ -5,31 +5,18 @@
 ```sh
 sudo certbot certonly --standalone --preferred-challenges http -d fiersoft.com
 ```
-<br />
 
 ### MySQL Insert Database
 
 ```sh
 mysql -uUSERNAME -pPASSWORD DB_NAME < /home/MY_DB.sql
 ```
-<br />
 
 ### PHP 7.2 fpm Restart
 
 ```sh
 sudo service php7.2-fpm restart
 ```
-<br />
-
-### phpMyAdmin Font Size
-
-```sh
-/usr/share/phpmyadmin/themes/pmahomme/css/codemirror.css.php
-```
-```css
-.CodeMirror pre {font-size: 1.2em;}
-```
-<br />
 
 ### PHP Upload Settings
 
@@ -50,3 +37,11 @@ sudo chown erman.www-data Example_Folder/
 ```sh
 sudo chmod 775 Example_Folder/
 ```
+
+### vsftpd.conf (with anonymous & user login)
+anonymous_enable=YES
+anon_root=/var/ftp/
+no_anon_password=YES
+hide_ids=YES
+pasv_min_port=40000
+pasv_max_port=50000
