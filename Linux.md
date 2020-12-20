@@ -65,6 +65,28 @@ sudo certbot renew
 ```
 
 
+### Remove .php extension from URL
+> By using .htaccess
+```sh
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+```
+> By using virtual.host.conf 
+```sh
+<Directory /path/to/directory>
+    AllowOverride All
+    Options FollowSymLinks
+    Require all granted
+
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
+</Directory>
+```
+
+
+
 
 
 
