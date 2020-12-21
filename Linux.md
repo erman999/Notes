@@ -44,6 +44,7 @@ sudo chmod 775 Example_Folder/
 ```
 
 ### vsftpd.conf (with anonymous & user login)
+> sudo nano /etc/vsftpd.conf
 ```sh
 anonymous_enable=YES
 anon_root=/var/ftp/
